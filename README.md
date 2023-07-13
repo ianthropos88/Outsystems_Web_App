@@ -1,4 +1,4 @@
-# Improve Business Decision Making Capabilities using Advanced Analytics/Business Intelligence with PostgreSQL and DAX 📈
+# Revolutionizing Data Management: A Digitized Solution for Europe, Africa, and the Middle East! :website:
 This is a project based on the issues faced by the Company to deliver the products to Country_1 and Country_2, and due to the increasing tensions and the change of the regulations, the deliveries to Country_3 and Country_4, too. The purpose of this project is set to achieve the real time tracking of the Planned Supply vs the Ongoing Loading as per the plan and the Production Required for the supply with "Treat & Pack" adherence.
 
 
