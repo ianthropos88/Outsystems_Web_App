@@ -1,61 +1,121 @@
-# Revolutionizing Data Management: A Digitized Solution for Europe, Africa, and the Middle East! :website:
-This is a project based on the issues faced by the Company to deliver the products to Country_1 and Country_2, and due to the increasing tensions and the change of the regulations, the deliveries to Country_3 and Country_4, too. The purpose of this project is set to achieve the real time tracking of the Planned Supply vs the Ongoing Loading as per the plan and the Production Required for the supply with "Treat & Pack" adherence.
+# Revolutionizing Data Management: A Digitized Solution for Europe, Africa, and the Middle East! :computer:
+This project highlights the successful development and implementation of a web app in the OutSystems cloud infrastructure platform. The web app addresses the challenges of managing regional supply chain regulatory data with access compliance and automation, effectively transforming manual data entry and updates previously done on Microsoft Word and Excel for multiple languages across Europe, Africa, and the Middle East.
+
+The project encompassed various stages, starting with designing the app and building the databases, followed by rigorous development, integration, and testing in a development environment. Continuous integration ensured the app's stability and reliability. Finally, the app was deployed in the production environment, making it accessible to end-users.
 
 
 ## > :rocket: **Thank you for your interest in my work.** :blush:
 
-This solution aims at developing a realtime tracker with extra smart visuals for tracking the Plan VS Execution scenario, for "Country_1", "Country_2", "Country_3" and "Country_4".
+The solution has been developed is a web application built on the OutSystems cloud infrastructure platform with a fully aligned database. This solution addresses the problem of manual data entry and update processes that were previously done in Microsoft Word and Excel for managing regional supply chain regulatory data.
 
-It leverages rich and diverse priors encapsulated with pretrained **PostgreSQL Queries** ----> **DAX** (e.g., DAX Measures) for **ETL**.
+By transforming these manual processes into a digital web application, we have solved several problems:
 
-## Business Intelligence, Dashboard Design, Dashboard Interface for Business 📊
+**1. Elimination of Manual Data Entry:** The web app eliminates the need for manual data entry in Word and Excel, which can be time-consuming, error-prone, and inefficient. It provides a more streamlined and automated process for entering and updating regulatory data.
+**2. Improved Data Accuracy and Integrity:** With the web app, data entry and updates are done digitally, reducing the risk of errors, and ensuring data accuracy and integrity. This is crucial for regulatory compliance and maintaining the quality of supply chain data.
+**3. Multilingual and Multinational Support:** The web app caters to multiple languages belonging to multiple countries in Europe, Africa, and the Middle East. It enables users to input and access regulatory data in their respective languages, accommodating diverse regional requirements.
+**4. Access Compliance and Security:** The web app ensures access compliance by implementing security features such as access controls, monitoring, and data protection. This addresses the need for secure handling of regulatory data, safeguarding sensitive information from unauthorized access or breaches.
+**5. Automation and Efficiency:** The digital transformation of manual data entry and update processes brings automation and efficiency to supply chain regulatory data management. Tasks that were previously time-consuming and labor-intensive are now streamlined, saving valuable resources, and improving productivity.
 
-In the world of Big Data, the need for business intelligence dashboards is widely understood. Most businesses know that they need a central location to gather and display relevant insights to different users. Well-designed dashboards can take complex data and turn it into useful information, while bad dashboards do just the opposite.
+Overall, this web app solution solves the problem of manual data entry, outdated tools, and inefficient processes for managing regional supply chain regulatory data. It provides a centralized, accessible, and secure platform for digitally transforming the way data is handled, ensuring compliance, accuracy, and efficiency in managing regulatory requirements across different languages and countries.
 
-But creating a dashboard that is clear, concise, and easy to understand can be a daunting task. With the application of design principles and best practices, any business can create a business intelligence dashboard that provides an overall view of the health of their business, with an opportunity for user engagement as needed.
+## How OutSystems solves the problem 📊
 
-#### Why Design and Context is Important in Designing a Business Intelligence Dashboard? ####
+OutSystems is a modern application platform that simplifies every stage of the app development and delivery process. Developers and teams can provide apps the business requires at the speed the market demands.
 
-The design and context of a business intelligence dashboard is crucial for increasing user engagement and understanding. The purpose of a dashboard is twofold; the first is to highlight the most important data, and the second is to provide context for that data. Data alone is difficult to interpret.
+Development teams design, develop, QA and analyze and manage their apps, no matter the size. All front-end and back-end development needs are covered. It also handles deployment and long-term maintenance. No one has to piece together separate tools, which can add cost and reduce productivity. And, we offer governance and impact analysis so big projects can get even bigger without requiring additional coding or management. 
 
-By providing context, the data tells a story and starts to make sense to the user — they can find meaning, see opportunities for growth, and identify any potential challenges or obstacles in their business. The design and context together give the user an at-a-glance idea of where things are and where they’re headed.
+Visual, model-driven development is at the core of the OutSystems platform, but there is so much more than that. OutSystems provides everything an organization needs to build applications fast, right, and for the future. The goal is to reduce costs and risks by enabling continuous deployment  across all platforms without breaks in the lifecycle by providing:
 
-#### What To Include in a Business Intelligence Dashboard? ####
+- Rapid productivity throughout the application lifecycle: You create your apps and integrate in weeks or less, not months.
+- Speed and code: Developing with a visual model while retaining complete flexibility to integrate custom code enables extensibility, efficiency, and accelerated development.
+- Multexperience development: Develop an application that can run on any device or platform. Risks, development time and costs are significantly reduced with error-free, automated deployments.
+- Open platform: Protect your investment in large back end systems by integrating with existing systems of record and/or data sources
+- Enterprise-grade platform: Build and manage very large portfolios of applications created by teams of developers just as easily and quickly as a single app.
+- Reduced costs: Reduce the costs of application maintenance to a fraction with automated dependency management and holistic application lifecycle management (ALM).
+- No lock-in: No runtime interpreters or engines are required to enable OutSystems applications. The platform generates apps with a standard architecture.
 
-Different businesses and industries will require different information displayed on their analytics dashboard. However, some general data sets apply to every business. This data includes the overall budget (year-to-date spending, revenue, and profits), as well as marketing efforts (campaign cost and ROI) and project management (planned vs. completed work).
+**Rapid productivity**
+OutSystems is designed from the ground up to accelerate not only the development of applications but also the process of changing them. Developers use visual, model-driven development, which reduces time and costs and improves agility. Elegant and engaging multiexperience user interfaces (UIs) harness the power of HTML and CSS, no deep expertise needed. Development is done without the headaches and inconsistencies of hand-coding and deployment is done with one click. Applications can be delivered in weeks or even days, not months or years. 
 
-To determine what you should include in a specific dashboard, identify the current opportunities and obstacles facing your business, design a rough prototype, and refine with user research. Consider searching for visual examples within your industry.
+In traditional application development, the change process often slows productivity significantly. OutSystems platform, however, automates this process. It tracks global dependencies and pinpoints the impact of a change across all layers of an application, thereby minimizing costs, time and risks. It heals the sections that can be automatically corrected and provides notifications of any required manual corrections. It has the capability to display application portfolios visually so architects and others can identify where problems might lie and what they can do about it. The result is error-free build packages that ensure production upgrades are done in minutes with no impact on the quality of running applications.
 
-### Best Practices for Business Intelligence Dashboard Design!📜 ###
+OutSystems also enables organizations to avoid the traditional delays and cost overruns associated with integration. Pre-built connectors, REST APIs, SOAP web services and custom APIs accelerate the integration of back-ends. Customers say, “OutSystems integrates with anything I need inside my enterprise."
 
-**Simplify and Summarize Content:**
-Because business intelligence dashboard design is only for providing a high-level look at business operations, you don’t need to include details of every project. Instead, simplify and summarize the key takeaways from various data sets so users can scan the dashboard quickly and get an idea of what’s going on in the business.
+Even application management is rapid because organizations have full visibility and control of their applications. OutSystems provides a centralized console for managing versions, releases, deployments, and component dependencies across multiple environments. Delivery is streamlined because there is no need for complex configuration tools. Organizations do not have to worry about build and version control, nor find the experts to set them up. 
 
-**Prioritize Your Insights:**
-There will always be more data available than space to display it. Prioritize your information so that the dashboard contains only the information that is most relevant to your user. Limit yourself to the top five or ten KPIs (key performance indicators) for your business.
+IT departments benefit from a default standard architecture and a well-designed visual modeling language with no dialects. Therefore, it is easy to transfer knowledge between developers in about 2 weeks even without additional documentation. This accelerates projects while allowing complete flexibility to outsource development with the knowledge that maintenance can be picked up at any time. A single developer is not indefinitely attached to a piece of mission-critical software and IT can bring new members into the team with the confidence that applications will never become an unmaintainable legacy. 
 
-**Organize Information Visually:**
-For a user to engage successfully with a business intelligence dashboard, they must be able to find answers to their questions within five to seven seconds of scanning a page. The better organized the data, the more likely users will be able to find answers quickly. It’s essential to adjust the size of different elements to show which parts of the dashboard are most important.
+**Speed and code**
+OutSystems uniquely combines development speed with seamless integration of custom and existing code for greater agility. Developers design the UI, business processes, business logic and data models for applications visually. Dragging and dropping functionality into a visual development environment provides greater agility than traditional hand coding. There is support for mashing up all components, including multiple sources of data, user interface blocks, APIs, integration connectors and business rules. This enables the agile creation of high-quality applications and processes in a fraction of the time it would take to build them with traditional solutions. 
 
-**Consider Device Size:**
-Many business executives are accessing their real-time dashboards on a desktop computer while they are in the office and on their mobile phones while on the go. Because of the limited size of handheld devices, it’s important to pare down the information included on your dashboard so that only the most vital insights are displayed. Consider creating a specific mobile version of your dashboard to ensure that your data is optimized to display at a smaller size.
+At any time, developers can extend the visual models with custom code or new integration connectors for those instances when business applications require access to low level SDKs or weave in external micro-services or data sources.
 
-**Allow for Customization:**
-Different users will have different needs in accessing the business intelligence professional dashboard. Rather than displaying all the information at once, consider including a filter at the top of the dashboard for users to select what data sets they want to view.
+But speed and control are not confined to development. With OutSystems, fast and secure deployment and change during the entire application lifecycle is just a click away. No matter how much an app is modified, OutSystems automates, manages and governs the change process to ensure deployment is error free. This even applies to deep changes to an application's data model, APIs and architecture.
 
-**Allow for More Exploration:**
-The primary purpose of the business intelligence dashboard is to provide users with a high-level view of the business. But many users will want to focus on a particular piece of information, and the dashboard system design should allow them to click, tap, or swipe to reveal more details.
+OutSystems tracks and pinpoints the impact of a change across all layers of your application, thereby minimizing costs, time and risks. It automatically corrects most problems and notifies teams if manual corrections are necessary. It also automates the deployment process, including all database change scripts. The result? Error-free, low-cost build packages that assure your production upgrades are done in minutes with no impact on quality.
 
-**Use Icons to Increase Understanding:**
-Most users see and understand graphics faster than the written word. Using simple iconography can help them interpret the data more quickly and with less effort. For example, use a dollar sign to represent spending, and computer or laptop to show website traffic.
+**Multiexperience  development**
+OutSystems enables organizations to develop quality applications once and deploy them everywhere in much less time and at a lower cost than traditional technology. A full spectrum of devices and operating systems are supported without sacrificing native responsiveness. 
 
-**Choose the Right Type of Data Visualization:**
-Different types of data are best explained through different types of visualizations. It’s important to select the right kind of data visualization so that the user doesn’t misinterpret the data. To show trends over time, consider a line graph. For comparing two products, consider a table. The right data visualization will help the user draw the right conclusion from the data.
+Once someone develops an app with OutSystems, it’s ready for all devices. The power of HTML and CSS are harnessed without hand coding, which significantly reduces errors, effort and development time. There’s no need to master constantly changing technology or hire expensive and scarce experts with device-specific knowledge.
 
-**Use Color Effectively:**
-Color should be used to enhance a data set, not distract or detract from it. Use business brand colors if needed, but also consider using generic colors to provide relevant meaning. For example, clients acquired could be shown in green to indicate positive results, while clients lost could be shown in red to indicate a negative result.
+It is easy to add native capabilities like geolocation, camera, notifications and on-device app integration to meet the needs of the business. And extending mobile apps to full browsers is effortless and risk free. 
 
-_Data visualization and data discovery are the most critical elements of your Business Intelligence (BI) delivery - so they'd better be right.💯_
+People can even develop apps, such as progressive web apps (PWAs), that work offline as quickly and easily as online apps with just one click. 
+Multiexperience development also means being able to develop an app and not having to worry about version changes and updates - or the high costs and risks involved - when new devices or platforms emerge. Each new version of the OutSystems regenerates existing applications to run on the latest versions of browsers, application server stacks, database engines, and mobile operating systems. Not only that, but OutSystems also packages mobile applications developed with the platform so they meet the requirements of the App Store and Google Play. 
+
+Because of these OutSystems capabilities, customers can take advantage of constantly improved code and architecture patterns that continuously enhance security, scalability and performance of applications. They do not have to worry about rewriting apps for new technology and they can bypass the Apple Store or Google Play approval processes that can cost time and money. 
+
+Changing applications is the same as developing new ones. OutSystems instantly serves application changes to user devices. When a new application or version is released, all users will have immediate access to it without having to install or update anything. If an organization finds a bug that puts data or users at risk, they can immediately correct it and deploy a new version of the application that works on all devices and platforms.
+
+**Open platform**
+OutSystems is an open unified platform that provides standards-based code and extensibility, because we know that proprietary data and architecture can limit application development and increase costs. We provide an open platform that can connect to any database and easily integrate with mission-critical systems.
+
+OutSystems offers an expressive visual language for developing applications and avoiding rapid application development pitfalls. The application visual models designed with OutSystems are compiled into standard, well-architected, and optimized code (Javascript, HTML, CSS, C#, and standard SQL). This means they can be deployed in standard application server environments, in private clouds or your own data centers.
+
+Visual models can be extended with standard or custom code such as JavaScript, CSS and HTML, Cordova plugins, C# and SQL. Developers can standardize around SOA and microservices. They can also integrate their apps with external databases and existing systems—even testing and monitoring tools. There are no limits on the types and sizes of applications that can be created.
+
+The OutSystems Forge living repository contains open source extensions that include wrappers to public open source SDKs, libraries or plugins. These extensions and wrappers can be used throughout your applications, so there’s no need to spend the time or expense to build something that already exists.
+
+For data access, OutSystems connects out-of-the-box to SQL Server, Oracle, MySQL and DB2. In addition, developers can implement a database connector to any database. They can write complex queries to an existing or imported database as part of an organization's pages, business logic or workflows. Standard SQL can be used to query the database that is being targeted.
+
+For integration with SAP and other mission-critical systems, OutSystems provides prebuilt connectors (e.g. for SAP BAPIs RFC access) or provides rapid REST or SOAP integration capabilities. No hand-coding is needed, which reduces costs and accelerates productivity. For REST APIs, OutSystems automatically creates an interface that can be dragged around in the visual logic, as with any other piece of business logic or web service. For SOAP web services, OutSystems will create all the necessary data structures for the web service methods to be used visually.
+
+**Enterprise-grade platform**
+OutSystems is now considered one of the best in class for enterprise application requirements. Large enterprises use it to deploy mission-critical applications, point-of-sale and mobile customer engagement. So, whether an organization needs to create an application for employees, business partners or customers, OutSystems is ready to deliver—fast and cost-effectively.
+
+OutSystems is continuously scalable to provide support for large portfolios of innovative, quality applications for line of business and core business processes. The flexible environment and governance features of OutSystems enable agile growth to a large well-designed and well-managed enterprise installation with hundreds of services and applications. 
+
+OutSystems can support as many developers and teams as are needed to get the job done without sacrificing performance or agility. Modularization, packaging, distribution and deployment of reusable components and services enable small and large teams to design maintainable large-scale SOAs with agility. Assets become modules that can be mashed up to enable dependency tracking and reuse, saving time, expense and effort. The delivery pipeline is automated for all the dependencies, ensuring a composite app is always consistent.
+
+OutSystems makes it extremely easy to integrate any external enterprise system, database or custom app with speed and extensibility. It provides seamless, out-of-the-box integration of enterprise data, third-party services, and custom apps. Pre-built connectors enable rapid integration with enterprise services and databases such as Salesforce, SAP, Oracle and more. And, developers can create, modify and extend their own custom integrations as needed.
+
+OutSystems includes APIs to integrate the deployment of OutSystems applications with your existing DevOps tools and processes. 
+
+**Reduced costs**
+OutSystems supports broad and complex lifecycles, enabling a continuous deployment process the moment a project starts. We make it as easy to manage and update applications as it is to deploy them. Throughout the lifecycle, OutSystems works behind the scenes to ensure that applications are error-free. Applications are both instrumented for performance and quality and their architectures can be viewed in the OutSystems Architecture Dashboard, making it easy to pinpoint any part of an application or portfolio that needs to be corrected or optimized. Performance or quality problems are detected early and resolved quickly, which lowers development and deployment costs.
+
+High-level security governance for applications and services enables our customers to define ownership, reuse, management and ops rules for a federated app development approach. Documentation is automated and back-office configuration services are centralized. Business process instances of operation and business activity monitoring are included. And, integration with mobile device management and mobile application management tools, such as Airwatch, enables mobile app governance.
+
+These centralized and automated management features keep costs down because much less time and fewer people are needed to manage and operate mission-critical apps. Staging across environments is automated with no downtime and, if there is an issue, rollback is also automated. Full dependency tracking across apps and services ensures consistency. As a result, our customers have been able to perform multiple complex deployments per day without breaking the bank.
+
+**No vendor lock-in**
+It's important to know what will happen to apps developed in OutSystems if vendor and platforms change. For worry-free and risk-free implementation, OutSystems is the only solution that truly offers "no lock in”.
+
+OutSystems doesn't use a proprietary runtime engine to run applications. Instead, OutSystems takes application models and generates standard applications that ultimately don't require OutSystems to run.
+
+The visual model data artifacts map directly into database native concepts without extra metadata. OutSystems enables access to the data through any standard ETL, BI or other third-party database tool.
+
+The code of the applications is also generated towards a target standard architecture - e.g. ReactJS in the frontend, C# in the backend - that we continuously evolve to address new architectural best practices and optimized performance.
+
+OutSystems takes care of all the steps required to generate, optimize, compile, and deploy applications into a standard web application server. Organizations don’t have to use expensive resources to handle them.
+
+This provides customers with the assurance that, if they ever stop using OutSystems, their IP is not lost, and applications will continue to run as-is in their own environment.
+
+The OutSystems architecture is a layered ecosystem that enables developers to build applications fast, build them right, and build them for the future.💯_
+
+![image](https://github.com/ianthropos88/Outsystem_Web_App/assets/76818972/0aedd252-3694-4643-b8e8-9a116020f400)
+
 
 ## My Solution 💡
 
