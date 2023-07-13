@@ -169,182 +169,177 @@ To build applications using existing data sources, use OutSystems Integration Bu
 Developers can combine local and external data sources without spending unnecessary time on complex integration projects.
 
 
-### **SQL Mind Mapping for Advanced Data Analytics !**
+### **Platform Server**
 
-*How do you explain mind mapping?*
+The Platform Server in each environment orchestrates compilation, deployment, and management activities for all applications. Platform Server installation is on all application servers that compose an environment.
 
-- A mind map involves writing down a central theme and thinking of new and related ideas which radiate out from the centre. By focusing on key ideas written down in your own words and looking for connections between them, you can map knowledge in a way that will help you to better understand and retain information.
+**OutSystems services**
 
-<p align="center">
-  <img align="center" src="image/static/SQL_Mind_Mapping.drawio.png" width=100%>
-</p>
-<p align="center"><b>Mind Map:</b> Mind Mapping for Better Understanding of SQL.</p>
+The Platform Server installs specific OutSystems services that deliver the platform’s core functionality. They can either run as a Windows service, a .NET Core app managed by IIS, or as a library in the applications themselves.
 
-# Data Model Optimization 🚶‍♂️ 
+- **Deployment controller service:** Enables the compilation of OutSystems applications and the automated deployment of the code to multiple servers.
+- **Deployment service:** Enables the deployment of OutSystems applications in the current server.
+- **Scheduler service:** is responsible for triggering asynchronous processes and manages timers, business processes, and emails.
+- **Server.API:** responsible for exposing some platform functionality as services.
+- **Server.Identity:** responsible for authenticating users and access control for the APIs exposed by the Server API.
 
-## 💾 **Initial: Prepare the Data Model for Analytics and Effective Transformation**
+# Standalone and server farm configurations 🚶‍♂️ 
 
-The model is designed following the best practices for better performance of data. As you can see below, the rules are segmented into categories. Some rules are more aesthetic-oriented while others are more focused on performance optimization. Note that there are several rules which require running an additional script.
+As load increases and high availability needs become apparent, it’s possible to add application servers (also referred to as front ends) to scale environments horizontally.
 
-**DAX Expressions**
-- Use the DIVIDE function for division.
-- Avoid using the IFERROR function.
-- Column references should be fully qualified.
-- Measure references should be unqualified.
-- Measures should not be direct references of other measures.
-- No two measures should have the same definition.
-- Use the TREATAS function instead of INTERSECT for virtual relationships.
+A distributed environment architecture allows you to balance costs in non-production environments with a minimum set of servers while simultaneously horizontally scaling up highly loaded production environments. On the top access layer, support for load balancing removes single points of failure.
 
+Two configurations, standalone and server farm, accommodate the differing needs of each environment.
 
-**Error Prevention**
-- Data columns must have a source column.
-- Calculated columns must have an expression.
+**Standalone**
 
+The usual architecture for non-production environments is standalone. In this configuration:
 
-**Formatting**
-- Add data category for columns.
-- Do not summarize numeric columns.
-- First letter of objects must be capitalized.
-- Hide fact table columns.
-- Hide foreign keys.
-- Mark primary keys.
-- Month (as a string) must be sorted.
-- Objects should not start or end with a space.
-- Percentages should be formatted with thousands separators and one decimal.
-- Format flag columns as Yes/No value strings.
-- Provide format string for “Date” columns.
-- Provide format string for “Month” columns.
-- Provide format string for measures.
-- Relationship columns should be of integer data type.
-- Whole numbers should be formatted with thousands separators and no decimals.
+- Deployment of Apps is to a single application server.
+- A single queue serves all requests.
+- The database installation can reside on the same physical server as the application server or a dedicated physical server.
 
+**Server farm**
 
-**Maintenance**
-- Ensure tables have relationships.
-- Objects with no description.
-- Remove data sources not referenced by any partitions.
-- Remove roles with no members.
-- Remove unnecessary columns.
-- Remove unnecessary measures.
+The server farm uses automated resource optimization and management to ensure an application consumes few resources while freeing unused resources. It's a typical configuration for production environments and large non-production environments. In a server farm:
 
+- Provisioning of multiple front-ends deals with increased load and high availability requirements.
+- The OutSystems Deployment Controller service ensures that application installation is consistent across all front-end servers.
+- Multiple queues handle service requests.
+- This configuration requires a load balancer.
+- High application hosting requirements would typically imply a dedicated database server.
 
-**Naming Conventions**
-- Use CamelCase for hidden columns.
-- Partition name should match table name for single partition tables.
-- Object names must not contain special characters.
+## Infrastructure architecture
 
+The OutSystems infrastructure is a set for environments that comprise the lifecycle of a portfolio of applications, managed using the LifeTime infrastructure management console. An OutSystems infrastructure includes the following components:
 
-**Performance**
-- Avoid bi-directional relationships against high-cardinality columns.
-- Avoid excessive bi-directional or many-to-many relationships.
-- Avoid snowflake schema architecture.
-- Do not use floating point data types.
-- Large tables should be partitioned.
-- Limit row level security (RLS) logic.
-- Many-to-many relationships should be single direction.
-- Minimize Power Query transformations.
-- Model should have a date table.
-- Model using Direct Query and no aggregations.
-- Reduce number of calculated columns.
-- Reduce usage of calculated columns that use the RELATED function.
-- Reduce usage of calculated tables.
-- Reduce usage of long-length columns with high cardinality.
-- Remove auto-date table.
-- Remove redundant columns in related tables.
-- Set IsAvailableInMdx to false on non-attribute columns.
-- Split date and time.
-- Date/calendar tables should be marked as a date table.
-- Unpivot pivoted (month) data.
-
+- **Environments for the product lifecycle management -** to deploy your infrastructure with a separate environment for each phase: development, functional testing, user acceptance testing (UAT), and production.
+- **LifeTime management console -** manages the infrastructure, environments, applications, IT users, and security. A LifeTime deployment has a dedicated environment with a dedicated server, database catalogs, and a central console.
+- **Pipelines -** to isolate applications based on common characteristics.
+- **OutSystems SaaS tools -** that support optional functionality and accelerate app development.
 
 <p align="center">
-  <img align="center" src="image/static/data_model_PowerBI.PNG" width=100%>
-</p>
-<p align="center"><b>Scenario 7:</b> The Data Model behind the Transformation.</p>
+  <img align="center" src="image/static/outsystems-infrastructure-architecture-diag.png" width=100%>
 
-While setting up my data model, I started by organizing my tables. As you can see in the image above, one of the best ways to do this is by using the Waterfall technique. Another way to do this effectively is by using the Star Schema approach. 
+## Pipelines 💯
+
+Not all apps have identical requirements; they have different business goals and non-functional requirements (NFR). With OutSystems, you have the option to deploy additional pipelines that allow you to isolate a portfolio of applications that have the same characteristics.
+
+They include a set of environments to enable independent development and release. Pipelines can help you with governance, compliance, and maintaining quality standards by allowing you to:
+
+- Isolate lines of apps with different lifecycle stages into pipelines. Each can have a different set of environments where one of the pipelines has an additional environment for an extra stage, such as mobile device testing.
+- Group applications with similar scalability and high availability needs.
+- Address compliance with data segregation policies with separate databases for more sensitive data.
+- Isolate mission-critical apps. Pipelines help isolate your mission-critical applications, catering to data isolation and additional lifecycle stages (perhaps, extra testing).
+
+All while maintaining the reusability of your components across an entire portfolio.
+
+
+### **OutSystems SaaS tools**
+
+Various SaaS tools provided by OutSystems are available. Installation of these isn't on your servers and requires connectivity to your OutSystems infrastructure. Connectivity is assured when using OutSystems Cloud, but on your self-managed infrastructure, you’ll need to be aware of this:
+
+- **Mobile Apps Build Service:** generates mobile packages for installation on mobile devices.
+- **AI Mentor Studio:** technical debt monitoring tool that enables you to visualize complex cross-portfolio architectures, identify problems, and help developers follow best practices.
+- **Workflow Builder:** creates workflows to build apps for task management and automation.
+- **Experience Builder:** prototype pixel-perfect mobile applications and turn them into production-ready apps.
 
 <p align="center">
-  <img align="center" src="image/static/manage_relation.PNG" width=100%>
-   
-</p>
-<p align="center"><b>Scenario 8:</b> Example of the Data/Table Relationship.</p>
+  <img align="center" src="image/static/outsystems-saas-tools-diag.png" width=100%>
 
-The Manage Relationships dialogue also makes it easy to view the cardinality and its direction.
+ ### **Infrastructure architecture examples**
 
-Ideally, relationships can either be one-to-many or many-to-one. Power BI is excellent at defaulting the cardinality according to your data.
+ OutSystems provides the flexibility to start with simple infrastructure. Edition upgrades and scale-ups are available to accommodate growing needs. The following examples show different infrastructure architectures compositions, from simple to complex.
 
-## Results and Next Steps 💯
+Addons are available in addition to the default configurations. Information on add-ons is available here.
+
+**Basic edition infrastructure**
+
+Use OutSystems Cloud's Basic edition to deploy departmental apps used only by your employees, such as an HR onboarding app.
+
+These apps share a simple life cycle, so three environments and a single pipeline suit the needs. They aren’t mission-critical, so a high-availability setup is unnecessary.
 
 <p align="center">
-  <img align="center" src="image/static/production_table.PNG" width=100%>
-  
-</p>
-<p align="center"><b>Test 1:</b> 'Country_1', 'Country_2', 'Country_3' & 'Country_4' Order Lines alligned with Seasonal Line Production.</p>
+  <img align="center" src="image/static/basic-edition-infrastructure-diag.png" width=100%>
 
-- **Best Performance:** Production for the Season Alligned with the Supply Requirements/Alligned with KPI's: >=95% "Green", >=90% && <95% "Yellow"
-, and <90% "Red"
-- **Supply Plan vs. Distribution Allignment:** Clustering for Data based on the Monthly Plan for the Season, 92% alligned with the Distribution.
-- **Current Inventory based of the Inventory Report Date:** Availability of the Inventory Data for the latest report date is alligned.
+For this setup, use these underlying servers:
 
-**Next Steps:**
-To estimate the impact of wave loading strategy on the supply productivity, we will run several simulations with a gradual number of orders per wave:
-1. Evaluate the Production KPI based on Customer Needs and Divert the Flow based on Predictions: How much is required more to fulfill the next allignment, what is required?
-2. Record Picking Route per Wave: Recording the sequence of locations per route for further analysis based on advance predictions.
+**Two database servers:**
 
-# **Use the application** 🖥️ 
-> This app has been deployed internally.
+- A shared database server or instance carries all the catalogs for the LifeTime, Development, and Test environments.
+- A dedicated database server for the Production environment.
 
-#### **Why should you use it?** 
-> This Power BI Cloud/Service Application has been designed for **Regional Business Leadership Team** to help them simulate the impact of data optimization in analyzing the Supply Plan Execution with the Distribution and Production.
+**Four front-end servers:**
 
-#### **Load the data**
+- 1 for LifeTime
+- 1 for Development
+- 1 for Test
+- 1 for Production
 
-- You cannot use the dataset of this project due to business security reasons.
-- You can build your own dataset following the step of ('Initial Step') above.
+**Standard edition infrastructure**
 
-##### **Comment 1:** Scope
+Let's consider departmental sales and productivity apps and a mission-critical mobile banking app.
 
-As the computation time can increase exponentially with the size of the dataset _(optimization can be done)_ you can change the model and the data load according to the need.
+The lifecycle of this portfolio requires a stage for device testing, so the extra UAT environment supports it.
 
-##### **Comment 2:** Fix the range of orders/loading wave to simulate
+The mobile banking app requires extra front ends to support a B2C expected usage. A mission-critical application translates to a high availability infrastructure, so the distribution of front-ends is between two data centers, and the database has a stand-by replica.
 
-We can modify the model to run a loop testing scenario with the number of orders per wave varying between planned scenario and the executed scenario.
-
-##### **Comment 3:** Start Calculation
-
-- The MEASURE keyword introduces a measure definition (DEFINE) in a query (also known as query measure).
-- The syntax after MEASURE defines a measure, which can be consumed in any other expression of the same query.
-- A query measure overrides a model measure with the same name. However, its definition is only used in other query measures; other model measures continue to use the model measure definition.
-
-- You can find the example DAX Queries used for this project in the folder:
-[wave_loading_analysis/dax_solution_measures_examples.txt](https://github.com/ianthropos88/wave_loading_analysis/blob/main/dax_solution_measures_examples.txt)
-- You can find DAX Overview in the folder:
-[wave_loading_analysis/DAX_World/DAX_Overview.pdf](https://github.com/ianthropos88/wave_loading_analysis/blob/main/DAX_World/DAX%20Overview.pdf)
-- You can find more advance DAX measures format in the folder:
-[wave_loading_analysis/DAX_World/DAX_World.xlsx](https://github.com/ianthropos88/wave_loading_analysis/blob/main/DAX_World/DAX%20World.xlsx)
-
-##### **Comment 4:** Moving Text
-
-Up until now, elements in Power BI Reports didn't move. In most cases, this is perfectly fine. But sometimes you might want to add a moving text or image to get the user's attention. This can be done with the help of the HTML Text_Styler.
-
-With the HTML Text_Styler, you can define the scroll direction, speed, number of times the text should move over the screen, and many other settings. Of course, you still have full flexibility when it comes to formatting.
-
-On top of that, the statement can be designed to work for other objects so you can also let an image move across your screen.
-
-- You can find the example HTML Text_Styler used for this project in the folder:
-[wave_loading_analysis/html_text_styler_solution_code.txt](https://github.com/ianthropos88/wave_loading_analysis/blob/main/html_text_styler_solution_code.txt)
-
-
-### **Final Results**
 <p align="center">
-  <img align="center" src="image/static/production_table.PNG" width=75%>
-    
-</p>
-<p align="center"><b>Experiment 1:</b> Production Results.</p>
+  <img align="center" src="image/static/standard-edition-infrastructure-diag.png" width=100%>
 
-💡 This is the same graph with the one presented in the article above. 
+As a result, this factory required:
 
+**Four database servers:**
+
+- A shared schema or catalog server for LifeTime, Development, and Test.
+- One dedicated to UAT.
+- One for the Production environment.
+- A standby database replica of the Production database
+
+**Eight front-end servers:**
+
+- One for LifeTime
+- One for Development
+- One for Test
+- One for UAT
+- Four for Production with a load balancer
+
+**Enterprise edition infrastructure**
+
+This scenario has a portfolio of departmental and external facing applications with different scaling needs, needing multiple pipelines. The external apps also handle sensitive data with strict policies requiring high availability.
+
+The fundamental differences between the two portfolios require a split into two pipelines. One of the pipelines needs two front ends in Production, the other four front ends. The pipelines may require further scaling in the future. Any specific data access rules execute in one of the pipelines.
+
+<p align="center">
+  <img align="center" src="image/static/enterprise-edition-infrastructure-diag.png" width=100%>
+
+For this infrastructure, two pipelines are necessary:
+
+**Six database servers:**
+
+- One shared database server or instance with all the catalogs of LifeTime and Development.
+- Two databases for the two test environments of both pipelines.
+- One database server for the Production environment of the pipeline is on the left.
+- Two database servers (primary and replica) for the Production environment of the pipeline on the right
+
+**Ten front-end servers:**
+
+- One for LifeTime.
+- One in Development.
+- Two for Test (one for each pipeline).
+- 2 in the Production environment that hosts the departmental applications.
+- Four for the Production environment comprising the mission-critical external facing apps.
+
+## **Deployment options**
+
+OutSystems builds on reliable technologies, and its scalable architecture allows adjustments of infrastructure configurations to your needs. OutSystems supports your infrastructure providers such as AWS and Azure. Application code and data are always under the customer’s control.
+
+In the OutSystems Cloud, managed infrastructure frees developers to focus on developing applications on the OutSystems platform.
+
+Deployment can be in a self-managed infrastructure, your data center, or a public cloud. You manage the runtime application server (IIS), and the operating system in these scenarios.
+
+<p align="center">
+  <img align="center" src="image/static/deployment-options-diag.png" width=100%>
 
 # About me 🤓
 - With 10+ years of industry experience, I have thrived in Data Science, Data Governance, IT, Cloud and Product Management. I have a keen interest and expertise in solving business problems using unique logic and analytics. I bring solutions to the table based on competitive Business Acumen and Human Intelligence.
