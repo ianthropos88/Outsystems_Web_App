@@ -6,14 +6,18 @@ The project encompassed various stages, starting with designing the app and buil
 
 ## > :rocket: **Thank you for your interest in my work.** :blush:
 
-The solution has been developed is a web application built on the OutSystems cloud infrastructure platform with a fully aligned database. This solution addresses the problem of manual data entry and update processes that were previously done in Microsoft Word and Excel for managing regional supply chain regulatory data.
+The solution developed is a web application built on the OutSystems cloud infrastructure platform with a fully aligned database. This solution addresses the problem of manual data entry and update processes that were previously done in Microsoft Word and Excel for managing regional supply chain regulatory data.
 
 By transforming these manual processes into a digital web application, we have solved several problems:
 
 **1. Elimination of Manual Data Entry:** The web app eliminates the need for manual data entry in Word and Excel, which can be time-consuming, error-prone, and inefficient. It provides a more streamlined and automated process for entering and updating regulatory data.
+
 **2. Improved Data Accuracy and Integrity:** With the web app, data entry and updates are done digitally, reducing the risk of errors, and ensuring data accuracy and integrity. This is crucial for regulatory compliance and maintaining the quality of supply chain data.
+
 **3. Multilingual and Multinational Support:** The web app caters to multiple languages belonging to multiple countries in Europe, Africa, and the Middle East. It enables users to input and access regulatory data in their respective languages, accommodating diverse regional requirements.
+
 **4. Access Compliance and Security:** The web app ensures access compliance by implementing security features such as access controls, monitoring, and data protection. This addresses the need for secure handling of regulatory data, safeguarding sensitive information from unauthorized access or breaches.
+
 **5. Automation and Efficiency:** The digital transformation of manual data entry and update processes brings automation and efficiency to supply chain regulatory data management. Tasks that were previously time-consuming and labor-intensive are now streamlined, saving valuable resources, and improving productivity.
 
 Overall, this web app solution solves the problem of manual data entry, outdated tools, and inefficient processes for managing regional supply chain regulatory data. It provides a centralized, accessible, and secure platform for digitally transforming the way data is handled, ensuring compliance, accuracy, and efficiency in managing regulatory requirements across different languages and countries.
@@ -27,14 +31,21 @@ Development teams design, develop, QA and analyze and manage their apps, no matt
 Visual, model-driven development is at the core of the OutSystems platform, but there is so much more than that. OutSystems provides everything an organization needs to build applications fast, right, and for the future. The goal is to reduce costs and risks by enabling continuous deployment  across all platforms without breaks in the lifecycle by providing:
 
 - Rapid productivity throughout the application lifecycle: You create your apps and integrate in weeks or less, not months.
+ 
 - Speed and code: Developing with a visual model while retaining complete flexibility to integrate custom code enables extensibility, efficiency, and accelerated development.
+  
 - Multexperience development: Develop an application that can run on any device or platform. Risks, development time and costs are significantly reduced with error-free, automated deployments.
-- Open platform: Protect your investment in large back end systems by integrating with existing systems of record and/or data sources
+  
+- Open platform: Protect your investment in large back end systems by integrating with existing systems of record and/or data sources.
+  
 - Enterprise-grade platform: Build and manage very large portfolios of applications created by teams of developers just as easily and quickly as a single app.
+  
 - Reduced costs: Reduce the costs of application maintenance to a fraction with automated dependency management and holistic application lifecycle management (ALM).
+  
 - No lock-in: No runtime interpreters or engines are required to enable OutSystems applications. The platform generates apps with a standard architecture.
 
 **Rapid productivity**
+
 OutSystems is designed from the ground up to accelerate not only the development of applications but also the process of changing them. Developers use visual, model-driven development, which reduces time and costs and improves agility. Elegant and engaging multiexperience user interfaces (UIs) harness the power of HTML and CSS, no deep expertise needed. Development is done without the headaches and inconsistencies of hand-coding and deployment is done with one click. Applications can be delivered in weeks or even days, not months or years. 
 
 In traditional application development, the change process often slows productivity significantly. OutSystems platform, however, automates this process. It tracks global dependencies and pinpoints the impact of a change across all layers of an application, thereby minimizing costs, time and risks. It heals the sections that can be automatically corrected and provides notifications of any required manual corrections. It has the capability to display application portfolios visually so architects and others can identify where problems might lie and what they can do about it. The result is error-free build packages that ensure production upgrades are done in minutes with no impact on the quality of running applications.
@@ -46,6 +57,7 @@ Even application management is rapid because organizations have full visibility 
 IT departments benefit from a default standard architecture and a well-designed visual modeling language with no dialects. Therefore, it is easy to transfer knowledge between developers in about 2 weeks even without additional documentation. This accelerates projects while allowing complete flexibility to outsource development with the knowledge that maintenance can be picked up at any time. A single developer is not indefinitely attached to a piece of mission-critical software and IT can bring new members into the team with the confidence that applications will never become an unmaintainable legacy. 
 
 **Speed and code**
+
 OutSystems uniquely combines development speed with seamless integration of custom and existing code for greater agility. Developers design the UI, business processes, business logic and data models for applications visually. Dragging and dropping functionality into a visual development environment provides greater agility than traditional hand coding. There is support for mashing up all components, including multiple sources of data, user interface blocks, APIs, integration connectors and business rules. This enables the agile creation of high-quality applications and processes in a fraction of the time it would take to build them with traditional solutions. 
 
 At any time, developers can extend the visual models with custom code or new integration connectors for those instances when business applications require access to low level SDKs or weave in external micro-services or data sources.
@@ -55,6 +67,7 @@ But speed and control are not confined to development. With OutSystems, fast and
 OutSystems tracks and pinpoints the impact of a change across all layers of your application, thereby minimizing costs, time and risks. It automatically corrects most problems and notifies teams if manual corrections are necessary. It also automates the deployment process, including all database change scripts. The result? Error-free, low-cost build packages that assure your production upgrades are done in minutes with no impact on quality.
 
 **Multiexperience  development**
+
 OutSystems enables organizations to develop quality applications once and deploy them everywhere in much less time and at a lower cost than traditional technology. A full spectrum of devices and operating systems are supported without sacrificing native responsiveness. 
 
 Once someone develops an app with OutSystems, it’s ready for all devices. The power of HTML and CSS are harnessed without hand coding, which significantly reduces errors, effort and development time. There’s no need to master constantly changing technology or hire expensive and scarce experts with device-specific knowledge.
@@ -69,6 +82,7 @@ Because of these OutSystems capabilities, customers can take advantage of consta
 Changing applications is the same as developing new ones. OutSystems instantly serves application changes to user devices. When a new application or version is released, all users will have immediate access to it without having to install or update anything. If an organization finds a bug that puts data or users at risk, they can immediately correct it and deploy a new version of the application that works on all devices and platforms.
 
 **Open platform**
+
 OutSystems is an open unified platform that provides standards-based code and extensibility, because we know that proprietary data and architecture can limit application development and increase costs. We provide an open platform that can connect to any database and easily integrate with mission-critical systems.
 
 OutSystems offers an expressive visual language for developing applications and avoiding rapid application development pitfalls. The application visual models designed with OutSystems are compiled into standard, well-architected, and optimized code (Javascript, HTML, CSS, C#, and standard SQL). This means they can be deployed in standard application server environments, in private clouds or your own data centers.
@@ -82,6 +96,7 @@ For data access, OutSystems connects out-of-the-box to SQL Server, Oracle, MySQL
 For integration with SAP and other mission-critical systems, OutSystems provides prebuilt connectors (e.g. for SAP BAPIs RFC access) or provides rapid REST or SOAP integration capabilities. No hand-coding is needed, which reduces costs and accelerates productivity. For REST APIs, OutSystems automatically creates an interface that can be dragged around in the visual logic, as with any other piece of business logic or web service. For SOAP web services, OutSystems will create all the necessary data structures for the web service methods to be used visually.
 
 **Enterprise-grade platform**
+
 OutSystems is now considered one of the best in class for enterprise application requirements. Large enterprises use it to deploy mission-critical applications, point-of-sale and mobile customer engagement. So, whether an organization needs to create an application for employees, business partners or customers, OutSystems is ready to deliver—fast and cost-effectively.
 
 OutSystems is continuously scalable to provide support for large portfolios of innovative, quality applications for line of business and core business processes. The flexible environment and governance features of OutSystems enable agile growth to a large well-designed and well-managed enterprise installation with hundreds of services and applications. 
@@ -93,6 +108,7 @@ OutSystems makes it extremely easy to integrate any external enterprise system, 
 OutSystems includes APIs to integrate the deployment of OutSystems applications with your existing DevOps tools and processes. 
 
 **Reduced costs**
+
 OutSystems supports broad and complex lifecycles, enabling a continuous deployment process the moment a project starts. We make it as easy to manage and update applications as it is to deploy them. Throughout the lifecycle, OutSystems works behind the scenes to ensure that applications are error-free. Applications are both instrumented for performance and quality and their architectures can be viewed in the OutSystems Architecture Dashboard, making it easy to pinpoint any part of an application or portfolio that needs to be corrected or optimized. Performance or quality problems are detected early and resolved quickly, which lowers development and deployment costs.
 
 High-level security governance for applications and services enables our customers to define ownership, reuse, management and ops rules for a federated app development approach. Documentation is automated and back-office configuration services are centralized. Business process instances of operation and business activity monitoring are included. And, integration with mobile device management and mobile application management tools, such as Airwatch, enables mobile app governance.
@@ -100,6 +116,7 @@ High-level security governance for applications and services enables our custome
 These centralized and automated management features keep costs down because much less time and fewer people are needed to manage and operate mission-critical apps. Staging across environments is automated with no downtime and, if there is an issue, rollback is also automated. Full dependency tracking across apps and services ensures consistency. As a result, our customers have been able to perform multiple complex deployments per day without breaking the bank.
 
 **No vendor lock-in**
+
 It's important to know what will happen to apps developed in OutSystems if vendor and platforms change. For worry-free and risk-free implementation, OutSystems is the only solution that truly offers "no lock in”.
 
 OutSystems doesn't use a proprietary runtime engine to run applications. Instead, OutSystems takes application models and generates standard applications that ultimately don't require OutSystems to run.
