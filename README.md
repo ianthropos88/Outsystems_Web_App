@@ -86,7 +86,8 @@ The visual model data artifacts map directly into database native concepts witho
 
 The OutSystems architecture is a layered ecosystem that enables developers to build applications fast, build them right, and build them for the future.💯_
 
-![image](https://github.com/ianthropos88/Outsystem_Web_App/assets/76818972/0aedd252-3694-4643-b8e8-9a116020f400)
+<p align="center">
+  <img align="center" src="image/static/overview-full-medium.png" width=100%>
 
 
 ## Infrastructure architecture and deployment options 💡
