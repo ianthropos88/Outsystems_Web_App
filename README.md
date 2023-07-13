@@ -134,141 +134,79 @@ The OutSystems architecture is a layered ecosystem that enables developers to bu
 ![image](https://github.com/ianthropos88/Outsystem_Web_App/assets/76818972/0aedd252-3694-4643-b8e8-9a116020f400)
 
 
-## My Solution 💡
+## Infrastructure architecture and deployment options 💡
 
-In this Power BI End Project, I have investigated multiple dataset's for the Company called **DROPLETS** and analyzed their churn rates. This business case helps to understand, why we are not able to deliver products to the customers, what are the obligations, and how we are handling the uncertanities.
+The OutSystems architecture is a layered ecosystem that enables developers to build applications fast, build them right, and build them for the future.
+
+The top layer of the architecture includes tools, a repository, builders, processes, and components that simplify challenging aspects of integration. These architecture components help manage the software development life cycle (SDLC).
+
+Underpinning this architecture are services for automating complex change management and architectural review processes, removing repetitive tasks and guesswork involved in application development, security, code generation, and logging. The runtime layer offers the option of deployment either in the OutSystems Cloud or on your systems.
+
+**Standard, reliable technologies**
+
+OutSystems runs on standard and scalable technology and doesn't need particular runtime engines or interpreters. It takes the visual application models you develop and generates a standard, optimized set of server (.NET) and client components (HTML, CSS, JavaScript) deployable to standard application servers.
+
+With OutSystems, you deploy standard client-server architectures on the OutSystems Cloud, your on-premises servers, or public clouds such as AWS or Azure.
+
+Application deployment is on IIS application servers running Microsoft Windows Server.
+
+Standard relational databases store application data and Platform Server metadata that your applications use. The currently supported database management systems are Microsoft SQL Server, Azure SQL Database, and Oracle. You can also integrate with other databases.
+
+# Environment architecture ⚖
+
+An OutSystems environment provides all the necessary infrastructure to allow you to develop and deliver applications. The available editions have at least three environments suited for development, test, and production.
+
+An environment includes a fully functional set of components that allow you to:
+
+- develop visual code and integrations
+- compile and deploy the code
+- access and use the deployed applications in a browser or mobile device simulator
+
+Environment deployment uses several underlying infrastructure components.
+
+- One or more application servers for the app runtime.
+- A database to store metadata and app data.
+- An OutSystems Platform Server installation.
+
+![image](https://github.com/ianthropos88/Outsystem_Web_App/assets/76818972/7469e837-26d1-46dd-a81d-b39e67078562)
 
 
+#### **Application Server**
 
-**The Overview:**
+Each environment has dedicated application servers running multiple applications. App deployment is on Microsoft IIS and Windows Server.
 
-<p align="center">
-  <img align="center" src="image/static/dashboard_front.PNG" width=100%>
-</p>
-<p align="center"><b>Scenario 1:</b> The front Page of the Final Dashboard with Navigation Buttons.</p>
+![image](https://github.com/ianthropos88/Outsystem_Web_App/assets/76818972/4c810c15-b7d4-42f3-b629-a4efdeaa9ae1)
 
-**Supply Plan VS Distribution:**
+At runtime, virtual directories map onto application domains. Multiple application domains run in a worker process.
 
-<p align="center">
-  <img align="center" src="image/static/distribution_page.PNG" width=100%>
-</p>
-<p align="center"><b>Scenario 2:</b> The Supply Plan VS Distribution Comparison based on Dynamic Visuals and smart selections.</p>
+**Database**
+You can choose to deploy your environment databases on Microsoft SQL Server, Azure SQL Database, or Oracle. For SQL and Azure databases, you need to configure three catalogs, and for Oracle, three schemas:
 
-**Seasonal Production:**
+- Platform database
+- Log database
+- Session database
 
-<p align="center">
-  <img align="center" src="image/static/production_page.PNG" width=100%>
-</p>
-<p align="center"><b>Scenario 3:</b> The seasonal production based on the treatment and pachaging for the required product lot with Dynamic Visuals and smart selections criterias.</p>
+The catalogs or schemas can reside in the same database instance or server. Distinct environments have distinct catalogs or schemas. Non-production environments often share the same database server, so the different schemas help maintain separation between them.
 
-**Available Inventory:**
+![image](https://github.com/ianthropos88/Outsystem_Web_App/assets/76818972/2b9a5780-d61b-4a13-9d43-384588729390)
 
-<p align="center">
-  <img align="center" src="image/static/inventory_page.PNG" width=100%>
-</p>
-<p align="center"><b>Scenario 4:</b> The current available inventory with the restricted and unrestricted quantities for use with Dynamic Visuals and smart selections criterias.</p>
+You have the flexibility to choose which environments should have dedicated database servers. As the best practice, you should deploy dedicated database servers in production environments:
 
-**Available Supply:**
+![image](https://github.com/ianthropos88/Outsystem_Web_App/assets/76818972/23767086-c07d-4cb2-9a9d-9dc1a60c7251)
 
-<p align="center">
-  <img align="center" src="image/static/supply_page.PNG" width=100%>
-</p>
-<p align="center"><b>Scenario 5:</b> The estimated available supply for the planning the requirement adherence, when required, for use with Dynamic Visuals and smart selections criterias.</p>
 
-**Additional Initiative: A Feedback Page**
+# Integration with external databases 📜
 
-<p align="center">
-  <img align="center" src="image/static/feedback_page.PNG" width=100%>
-</p>
-<p align="center"><b>Scenario 6:</b> A feedback page available through the navigation button on the Home Page/Overiew Page designed with Smartsheet App, so that the users are not dependent on Emails and Chats and can register their request based on valid points related to the Business Needs.</p>
+To build applications using existing data sources, use OutSystems Integration Builder. Supported databases are:
 
-# Load the Data with ODBC ⚖
+- SQL Server
+- SQL Azure
+- Oracle
+- MySQL
+- PostgreSQL
+- DB2 iSeries
 
-Because the company database system is managed by AWS and the resources provided by AWS cloud for Microsoft are limited, I would suggest to load the data with ODBC.
-
-**Capabilities Supported**
-- Import
-- Advanced options
-
-        Connection string (non-credential properties)
-        SQL statement
-        Supported row reduction clauses
-
-- >   **Server:** console.server_schema.(company_name)aws.org
-- >   **Port:** ****
-- >   **Database:** ****
-
-**ODBC Connection String**
-_64 Bit_
-- >   Driver={Amazon Redshift (x64)}; Server=console.server_schema.(company_name)aws.org; Port=****; Database= ****
-
-#### **Known issues and limitations**
-
-**Connection string attributes**
-
-If a DSN is specified in the ODBC connection string, the attributes after the DSN specification aren't included. If you want to use additional attributes, update them in the DSN itself, as opposed to in the connection string.
-
-**On-Premises Data Gateway**
-
-Gateway cluster with load balancing is enabled for all the workloads for this project, where it receives a request from one of the cloud services (like Power BI), it randomly selects a gateway member. If this member gateway is already at or over one of the throttling limits specified below, another member within the cluster is selected. If all members within the cluster are in the same state, the request fails. The Gateway Cluster for these data tables are enabled to 2 different clusters.
-
-During the setup the following settings were enabled in the Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config file available in the Program Files\On-premises data gateway folder in order to adjust throttling limits. Concurrency throttling is enabled by default.
-
-- **CPUUtilizationPercentageThreshold** - This configuration allows gateway admins to set a throttling limit for CPU. The permissible range for this configuration is 0 to 100. A value of 0, which is the default, indicates that this configuration is disabled.
-- **MemoryUtilizationPercentageThreshold** - This configuration allows gateway admins to set a throttling limit for memory. The permissible range for this configuration is 0 to 100. A value of 0, which is the default, indicates that this configuration is disabled.
-- **ResourceUtilizationAggregationTimeInMinutes** - This configuration sets the time in minutes for which CPU and memory system counters of the gateway machine are aggregated. The aggregated values are then compared against the respective threshold limits set for CPUUtilizationPercentageThreshold and MemoryUtilizationPercentageThreshold. The default value for this configuration is 5.
-- **ConcurrentOperationLimitPreview** - This configuration sets concurrent operation limit for the Gateway. BypassConcurrentOperationLimit can be set to remove all concurrent operation limits. The default value for this configuration is 40.
-
-**Example errors when limit encountered**
-```
-The gateway you selected can't establish data source connections because it's exceeded the CPU limit set by your gateway admin. Try again later, or ask your gateway admin to increase the limit.
-
-The gateway you selected can't establish data source connections because it's exceeded the memory limit set by your gateway admin. Try again later, or ask your gateway admin to increase the limit.
-
-The gateway you selected can't establish data source connections because it's exceeded the concurrency limit set by your gateway admin. Try again later, or ask your gateway admin to increase the limit.
-```
-
-# START your SQL Queries 📜
-
-- SQL is a standard language for accessing and manipulating databases.
-
-**What is SQL?**
-- SQL stands for Structured Query Language.
-- SQL lets you access and manipulate databases.
-- SQL became a standard of the American National Standards Institute (ANSI) in 1986, and of the International Organization for Standardization (ISO) in 1987.
-
-**What Can SQL do?**
-- SQL can execute queries against a database.
-- SQL can retrieve data from a database.
-- SQL can insert records in a database.
-- SQL can update records in a database.
-- SQL can delete records from a database.
-- SQL can create new databases.
-- SQL can create new tables in a database.
-- SQL can create stored procedures in a database.
-- SQL can create views in a database.
-- SQL can set permissions on tables, procedures, and views.
-
-**SQL is a Standard - BUT....**
-Although SQL is an ANSI/ISO standard, there are different versions of the SQL language.
-
-However, to be compliant with the ANSI standard, they all support at least the major commands (such as SELECT, UPDATE, DELETE, INSERT, WHERE) in a similar manner.
-
-**Using SQL in Your Web Site**
-To build a web site that shows data from a database, you will need:
-
-- An RDBMS database program (i.e. MS Access, SQL Server, MySQL)
-- To use a server-side scripting language, like PHP or ASP
-- To use SQL to get the data you want
-- To use HTML / CSS to style the page
-
-**You can find the PostgreSQL Queries used for this project in the folder's:**
-- [Distribution Table](https://github.com/ianthropos88/wave_loading_analysis/blob/main/PostgreSQL/Distribution.sql)
-- [Production Table](https://github.com/ianthropos88/wave_loading_analysis/blob/main/PostgreSQL/Production.sql)
-- [Stock Movement](https://github.com/ianthropos88/wave_loading_analysis/blob/main/PostgreSQL/StockMovement.sql)
-- [Current Inventory](https://github.com/ianthropos88/wave_loading_analysis/blob/main/PostgreSQL/Inventory.sql)
-- [Transportation Order](https://github.com/ianthropos88/wave_loading_analysis/blob/main/PostgreSQL/TransportationOrder.sql)
-- [Available Supply](https://github.com/ianthropos88/wave_loading_analysis/blob/main/PostgreSQL/Supply.sql)
+Developers can combine local and external data sources without spending unnecessary time on complex integration projects.
 
 
 ### **SQL Mind Mapping for Advanced Data Analytics !**
