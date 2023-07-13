@@ -124,14 +124,16 @@ Environment deployment uses several underlying infrastructure components.
 - A database to store metadata and app data.
 - An OutSystems Platform Server installation.
 
-![image](https://github.com/ianthropos88/Outsystem_Web_App/assets/76818972/7469e837-26d1-46dd-a81d-b39e67078562)
+<p align="center">
+  <img align="center" src="image/static/outsystems-environment-architecture-diag.png" width=100%>
 
 
 #### **Application Server**
 
 Each environment has dedicated application servers running multiple applications. App deployment is on Microsoft IIS and Windows Server.
 
-![image](https://github.com/ianthropos88/Outsystem_Web_App/assets/76818972/4c810c15-b7d4-42f3-b629-a4efdeaa9ae1)
+<p align="center">
+  <img align="center" src="image/static/infra-options-diag.png" width=100%>
 
 At runtime, virtual directories map onto application domains. Multiple application domains run in a worker process.
 
@@ -144,11 +146,13 @@ You can choose to deploy your environment databases on Microsoft SQL Server, Azu
 
 The catalogs or schemas can reside in the same database instance or server. Distinct environments have distinct catalogs or schemas. Non-production environments often share the same database server, so the different schemas help maintain separation between them.
 
-![image](https://github.com/ianthropos88/Outsystem_Web_App/assets/76818972/2b9a5780-d61b-4a13-9d43-384588729390)
+<p align="center">
+  <img align="center" src="image/static/distinct-environments-catalogs-schemas-diag.png" width=100%>
 
 You have the flexibility to choose which environments should have dedicated database servers. As the best practice, you should deploy dedicated database servers in production environments:
 
-![image](https://github.com/ianthropos88/Outsystem_Web_App/assets/76818972/23767086-c07d-4cb2-9a9d-9dc1a60c7251)
+<p align="center">
+  <img align="center" src="image/static/environment-dedicated-database-diag.png" width=100%>
 
 
 # Integration with external databases 📜
