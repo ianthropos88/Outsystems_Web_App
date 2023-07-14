@@ -108,6 +108,22 @@ Application deployment is on IIS application servers running Microsoft Windows S
 
 Standard relational databases store application data and Platform Server metadata that your applications use. The currently supported database management systems are Microsoft SQL Server, Azure SQL Database, and Oracle. You can also integrate with other databases.
 
+# Solution Logic ⚖
+
+In OutSystems, the logic of our applications is implemented through Actions. While developing our applications, I created own custom actions and used the actions to perform job:
+
+OutSystems built-in actions: Actions that are defined by the platform and cannot be modified or inspected. We can use them in our action flows, such as Entity Actions, System Actions, or Role Actions.
+
+Custom actions: The actions that we create to define our business rules, fetch data from the database, run integrations with external systems, among other operations.
+
+Actions that handle System Events: Actions that run at specific moments of the application life cycle, such as when a web session starts or a mobile app resumes. I was able to design the flow of these actions according to our business rules.
+
+<p align="center">
+  <img align="center" src="image/static/Add_New_User.PNG" width=100%>
+
+  <p align="center">
+  <img align="center" src="image/static/update_data.PNG" width=100%>
+
 # Environment architecture ⚖
 
 An OutSystems environment provides all the necessary infrastructure to allow you to develop and deliver applications. The available editions have at least three environments suited for development, test, and production.
