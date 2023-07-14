@@ -119,10 +119,10 @@ Custom actions: The actions that we create to define our business rules, fetch d
 Actions that handle System Events: Actions that run at specific moments of the application life cycle, such as when a web session starts or a mobile app resumes. I was able to design the flow of these actions according to our business rules.
 
 <p align="center">
-  <img align="center" src="image/static/Add_New_User.PNG" width=100%>
+  <img align="center" src="image/static/Add_New_User.PNG" width=60%>
 
   <p align="center">
-  <img align="center" src="image/static/update_data.PNG" width=100%>
+  <img align="center" src="image/static/update_data.PNG" width=60%>
 
 # Environment architecture ⚖
 
