@@ -22,7 +22,7 @@ By transforming these manual processes into a digital web application, we have s
 
 Overall, this web app solution solves the problem of manual data entry, outdated tools, and inefficient processes for managing regional supply chain regulatory data. It provides a centralized, accessible, and secure platform for digitally transforming the way data is handled, ensuring compliance, accuracy, and efficiency in managing regulatory requirements across different languages and countries.
 
-## How OutSystems solves the problem 📊
+## How OutSystems solves the problem! 📊
 
 OutSystems is a modern application platform that simplifies every stage of the app development and delivery process. Developers and teams can provide apps the business requires at the speed the market demands.
 
@@ -90,7 +90,7 @@ The OutSystems architecture is a layered ecosystem that enables developers to bu
   <img align="center" src="image/static/overview-full-medium.png" width=100%>
 
 
-## Infrastructure architecture and deployment options 💡
+## Infrastructure Architecture and Deployment Options 💡
 
 The OutSystems architecture is a layered ecosystem that enables developers to build applications fast, build them right, and build them for the future.
 
